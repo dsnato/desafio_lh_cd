@@ -94,10 +94,23 @@ xgboost
 joblib
 ```
 
-📈 Resultados
+## 📈 Resultados
 
-O modelo XGBoost apresentou o menor RMSE comparado aos baselines.
+- **Desempenho comparativo:**  
+  - O **XGBoost** apresentou o melhor RMSE entre os modelos testados (Regressão Linear, Random Forest e XGBoost), servindo como modelo principal.  
+  - Os modelos baseline (Linear e Random Forest) foram usados como referência para validar o ganho real do XGBoost.
 
-Após remover a feature mais importante, o desempenho se manteve estável, mostrando maior resiliência.
+- **Impacto da remoção da variável mais importante:**  
+  - Identificou-se a *feature* mais importante a partir da importância calculada pelo XGBoost.  
+  - Ao remover essa variável e re-treinar o modelo, avaliamos o efeito na generalização:  
+    - **Se o RMSE não aumentar significativamente**, a remoção melhora a robustez contra *leakage* sem perda de performance.  
+    - **Se o RMSE aumentar bastante**, é preciso verificar se essa *feature* é de fato legítima para uso em produção (ex.: informações só disponíveis depois do lançamento do filme).
 
-No_of_Votes_log e Gross_log foram confirmadas como variáveis fortes, junto com os gêneros.
+- **Features com maior influência:**  
+  - `No_of_Votes_log` e `Gross_log` aparecem como variáveis fortes, junto com colunas de gênero e a agregação de reputação do elenco.  
+  - As *bins* de reputação (diretor/ator) ajudaram a capturar sinal histórico sem expor diretamente o target.
+
+- **Observações gerais:**  
+  - A distribuição do target (`IMDB_Rating`) tende a ser concentrada (pouca variância), o que exige features informativas e validações rigorosas.  
+  - Curvas de aprendizado foram usadas para diagnosticar **overfitting/underfitting** e orientar a escolha de complexidade e regularização.
+

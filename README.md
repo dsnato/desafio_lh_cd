@@ -90,6 +90,7 @@ seaborn, matplotlib
 scikit-learn
 xgboost
 joblib
+```
 
 📈 Resultados
 O modelo XGBoost apresentou o menor RMSE comparado aos baselines.

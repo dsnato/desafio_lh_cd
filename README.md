@@ -10,13 +10,15 @@ O projeto foi desenvolvido como parte de um desafio técnico de Ciência de Dado
 
 ## 🏗️ Estrutura do Projeto
 
+```
 ├── data/
-│ └── desafio_indicium_imdb.csv # Dataset original
+│   └── desafio_indicium_imdb.csv     # Dataset original
 ├── notebooks/
-│ └── LH_CD_RENATOSAMICO.ipynb # Notebook com todo o pipeline
+│   └── LH_CD_RENATOSAMICO.ipynb      # Notebook com todo o pipeline
 ├── models/
-│ └── model_imdb_rating.pkl # Modelo treinado (XGBoost)
-├── README.md # Documentação do projeto
+│   └── model_imdb_rating.pkl         # Modelo treinado (XGBoost)
+├── README.md                         # Documentação do projeto
+```
 
 ---
 

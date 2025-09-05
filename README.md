@@ -95,6 +95,9 @@ joblib
 ```
 
 📈 Resultados
+
 O modelo XGBoost apresentou o menor RMSE comparado aos baselines.
+
 Após remover a feature mais importante, o desempenho se manteve estável, mostrando maior resiliência.
+
 No_of_Votes_log e Gross_log foram confirmadas como variáveis fortes, junto com os gêneros.

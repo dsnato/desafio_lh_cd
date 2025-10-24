@@ -99,5 +99,5 @@ joblib
 - **Observações gerais:**  
   - A distribuição do target (`IMDB_Rating`) tende a ser concentrada (pouca variância), o que exige features informativas e validações rigorosas.  
   - Curvas de aprendizado foram usadas para diagnosticar **overfitting/underfitting** e orientar a escolha de complexidade e regularização.
-  - O projeto deverá ser revisto e melhorado no futuro.
+  - O projeto deverá ser revisto e melhorado no futuro. Quem quiser contribuir é muito bem-vindo.
 
